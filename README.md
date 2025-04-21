@@ -4,7 +4,7 @@
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.1%2B-brightgreen)](https://spring.io/projects/spring-boot)
 [![MongoDB](https://img.shields.io/badge/MongoDB-5.0%2B-green)](https://www.mongodb.com/)
 
-A Spring Boot service implementing **Hexagonal Architecture** to fetch and manage similar product data with external API integration and MongoDB persistence.
+A Spring Boot service implementing **Hexagonal Architecture** to fetch and manage similar product data with external API integration and MongoDB persistence. Integrates with the [Backend Dev Test API](https://github.com/dalogax/backendDevTest) for product data retrieval.
 
 ## Features
 - 🏛️ Hexagonal Architecture pattern
@@ -75,5 +75,3 @@ Features include:
 - Successful product retrieval (200 OK)
 - Non-existent product handling (404 Not Found)
 - Service unavailable scenarios (500 errors)
-
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/REPLACE_WITH_YOUR_COLLECTION_ID)
