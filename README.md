@@ -13,6 +13,7 @@ A Spring Boot service implementing **Hexagonal Architecture** to fetch and manag
 - 🐳 Dockerized MongoDB setup
 - 📡 REST API endpoints
 - 🛡️ Fallback mechanisms for failed requests
+-  📦 Postman collection for API testing
 
 ## Prerequisites
 - Java 21+
@@ -53,4 +54,26 @@ curl -H "Accept: application/json" http://localhost:5000/product/1/similar
   }
 ]
 ````
+### API Testing with Postman
+A ready-to-use Postman collection is available in PostmanCollection in this repository.
+Features include:
+- Preconfigured requests with examples
+- Automated response validation
+- Environment variables setup
+- Error scenario testing
 
+**Import the collection**:
+1. Download the collection file
+2. Open Postman → Import → File
+3. Select the JSON file
+4. Set environment variable:
+   ```text
+   base_url = http://localhost:5000
+   ```
+
+**Test scenarios included**:
+- Successful product retrieval (200 OK)
+- Non-existent product handling (404 Not Found)
+- Service unavailable scenarios (500 errors)
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/REPLACE_WITH_YOUR_COLLECTION_ID)
