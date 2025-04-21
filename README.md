@@ -23,7 +23,7 @@ A Spring Boot service implementing **Hexagonal Architecture** to fetch and manag
 
 ## Installation
 ```bash
-git clone https://github.com/DSanchezLopez/similar-products-service.git
+git clone https://github.com/DSanchezLopez/backEndSimilarProducts
 cd similar-products-service
 mvn clean install
 docker-compose up -d
