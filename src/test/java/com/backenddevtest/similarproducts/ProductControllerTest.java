@@ -11,8 +11,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-
-import com.backenddevtest.similarproducts.core.service.ProductService;
+import com.backenddevtest.similarproducts.application.usecases.ProductService;
 import com.backenddevtest.similarproducts.infraestructure.adapters.input.ProductController;
 
 @SpringBootTest(classes = {ProductController.class})

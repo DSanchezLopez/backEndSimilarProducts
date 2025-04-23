@@ -1,8 +1,8 @@
-package com.backenddevtest.similarproducts.core.ports;
+package com.backenddevtest.similarproducts.domain.ports.output;
 
 import java.util.List;
 
-import com.backenddevtest.similarproducts.core.model.Product;
+import com.backenddevtest.similarproducts.domain.model.Product;
 
 public interface ProductProvider {
 

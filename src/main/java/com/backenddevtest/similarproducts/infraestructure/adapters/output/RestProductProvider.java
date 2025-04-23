@@ -9,9 +9,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
-import com.backenddevtest.similarproducts.core.model.Product;
-import com.backenddevtest.similarproducts.core.ports.ProductProvider;
-import com.backenddevtest.similarproducts.infraestructure.adapters.output.mappers.ProductMappers;
+import com.backenddevtest.similarproducts.domain.mappers.ProductMappers;
+import com.backenddevtest.similarproducts.domain.model.Product;
+import com.backenddevtest.similarproducts.domain.ports.output.ProductProvider;
 import com.backenddevtest.similarproducts.infraestructure.dto.ProductDetailsDTO;
 import com.backenddevtest.similarproducts.infraestructure.utils.SimilarProductsUtils;
 

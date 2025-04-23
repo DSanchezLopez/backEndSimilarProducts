@@ -1,8 +1,8 @@
-package com.backenddevtest.similarproducts.core.service;
+package com.backenddevtest.similarproducts.domain.usecases;
 
 import java.util.List;
 
-import com.backenddevtest.similarproducts.core.model.Product;
+import com.backenddevtest.similarproducts.domain.model.Product;
 
 public interface ProductService {
 

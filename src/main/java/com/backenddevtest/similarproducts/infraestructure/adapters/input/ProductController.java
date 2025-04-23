@@ -4,8 +4,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.backenddevtest.similarproducts.core.service.ProductService;
-import com.backenddevtest.similarproducts.infraestructure.adapters.output.mappers.ProductMappers;
+import com.backenddevtest.similarproducts.application.usecases.ProductService;
+import com.backenddevtest.similarproducts.domain.mappers.ProductMappers;
 import com.backenddevtest.similarproducts.infraestructure.dto.ProductResponseDTO;
 
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,5 @@
-package com.backenddevtest.similarproducts.application;
+package com.backenddevtest.similarproducts;
+
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

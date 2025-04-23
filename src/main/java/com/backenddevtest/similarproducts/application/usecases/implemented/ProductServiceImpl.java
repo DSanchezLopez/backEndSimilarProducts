@@ -1,11 +1,13 @@
-package com.backenddevtest.similarproducts.core.service.implemented;
+package com.backenddevtest.similarproducts.application.usecases.implemented;
 
 import java.util.List;
 import org.springframework.stereotype.Service;
-import com.backenddevtest.similarproducts.core.model.Product;
-import com.backenddevtest.similarproducts.core.ports.ProductProvider;
-import com.backenddevtest.similarproducts.core.ports.ProductRepository;
-import com.backenddevtest.similarproducts.core.service.ProductService;
+
+import com.backenddevtest.similarproducts.application.usecases.ProductService;
+import com.backenddevtest.similarproducts.domain.model.Product;
+import com.backenddevtest.similarproducts.domain.ports.output.ProductProvider;
+import com.backenddevtest.similarproducts.domain.ports.output.ProductRepository;
+
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

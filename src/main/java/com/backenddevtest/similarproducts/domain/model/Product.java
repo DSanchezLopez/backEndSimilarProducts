@@ -1,4 +1,4 @@
-package com.backenddevtest.similarproducts.core.model;
+package com.backenddevtest.similarproducts.domain.model;
 
 import lombok.Data;
 

@@ -1,6 +1,6 @@
-package com.backenddevtest.similarproducts.infraestructure.adapters.output.mappers;
+package com.backenddevtest.similarproducts.domain.mappers;
 
-import com.backenddevtest.similarproducts.core.model.Product;
+import com.backenddevtest.similarproducts.domain.model.Product;
 import com.backenddevtest.similarproducts.infraestructure.documents.ProductDocument;
 import com.backenddevtest.similarproducts.infraestructure.dto.ProductDetailsDTO;
 import com.backenddevtest.similarproducts.infraestructure.dto.ProductResponseDTO;

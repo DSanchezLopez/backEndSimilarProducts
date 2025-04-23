@@ -14,10 +14,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.backenddevtest.similarproducts.core.model.Product;
-import com.backenddevtest.similarproducts.core.ports.ProductProvider;
-import com.backenddevtest.similarproducts.core.ports.ProductRepository;
-import com.backenddevtest.similarproducts.core.service.implemented.ProductServiceImpl;
+import com.backenddevtest.similarproducts.application.usecases.implemented.ProductServiceImpl;
+import com.backenddevtest.similarproducts.domain.model.Product;
+import com.backenddevtest.similarproducts.domain.ports.output.ProductProvider;
+import com.backenddevtest.similarproducts.domain.ports.output.ProductRepository;
 
 @ExtendWith(MockitoExtension.class)
 public class ProductServiceImplTest {
