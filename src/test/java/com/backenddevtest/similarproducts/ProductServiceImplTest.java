@@ -1,11 +1,9 @@
 package com.backenddevtest.similarproducts;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
@@ -20,40 +18,41 @@ import com.backenddevtest.similarproducts.domain.ports.output.ProductProvider;
 import com.backenddevtest.similarproducts.domain.ports.output.ProductRepository;
 
 @ExtendWith(MockitoExtension.class)
-public class ProductServiceImplTest {
+class ProductServiceImplTest {
 
-    @Mock
-    private ProductProvider productProvider;
-
-    @Mock
-    private ProductRepository productRepository;
-
-    @InjectMocks
-    private ProductServiceImpl productService;
+    @Mock private ProductProvider productProvider;
+    @Mock private ProductRepository productRepository;
+    @InjectMocks private ProductServiceImpl productService;
 
     @Test
-    void getSimilarProducts_ReturnsProductsAndSavesThen(){
+    void getSimilarProducts_ValidId_SavesProducts() {
+        Product product = new Product();
+        product.setId("1");
+        when(productProvider.findSimilarProducts("1")).thenReturn(List.of(product));
 
-        String productId = "1";
-        Product mockProduct = new Product();
-        mockProduct.setId("2");
-        when(productProvider.findSimilarProducts(productId)).thenReturn(List.of(mockProduct));
-
-        List<Product> result = productService.getSimilarProducts(productId);
-
+        List<Product> result = productService.getSimilarProducts("1");
+        verify(productRepository, times(1)).save(product);
         assertEquals(1, result.size());
-        assertEquals("2", result.get(0).getId());
-        verify(productRepository, times(1)).save(mockProduct);
     }
 
     @Test
-    void productExists_ReturnTrueWhenProductFound(){
-
-        String productId = "1";
-        when(productProvider.findProductById(productId)).thenReturn(new Product());
-
-        assertTrue(productService.productExists(productId));
-
+    void productExists_WhenProductFound_ReturnsTrue() {
+        when(productProvider.findProductById("1")).thenReturn(new Product());
+        assertTrue(productService.productExists("1"));
     }
+
+@Test
+void getSimilarProducts_EmptyResponse_ReturnsEmptyList() {
+    when(productProvider.findSimilarProducts("2")).thenReturn(Collections.emptyList());
     
+    List<Product> result = productService.getSimilarProducts("2");
+    assertTrue(result.isEmpty());
+    verify(productRepository, never()).save(any());
+}
+
+@Test
+void productExists_WhenProductNotFound_ReturnsFalse() {
+    when(productProvider.findProductById("3")).thenReturn(null);
+    assertFalse(productService.productExists("3"));
+}
 }
