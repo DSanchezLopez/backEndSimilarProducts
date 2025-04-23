@@ -4,8 +4,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.backenddevtest.similarproducts.application.usecases.ProductService;
 import com.backenddevtest.similarproducts.domain.mappers.ProductMappers;
+import com.backenddevtest.similarproducts.domain.usecases.ProductService;
 import com.backenddevtest.similarproducts.infraestructure.dto.ProductResponseDTO;
 
 import lombok.extern.slf4j.Slf4j;
@@ -48,28 +48,11 @@ public class ProductController {
             .collect(Collectors.toList())
         );
         
-        // List<ProductResponse> response = productService.getSimilarProducts(productId)
-        //     .stream()
-        //     .map(ProductMappers::toResponse)
-        //     .collect(Collectors.toList());
-        // return ResponseEntity.ok(response);
+
 
 
     }
     
 
-    // @GetMapping("/{productId}/similar")
-    // public ResponseEntity<List<ProductDetailsDTO>> getSimilarProducts(@PathVariable String productId) {
-        
-    //     log.info("GETSIMILARPRODUCTS CALLED WITH ID: {}",productId);
-    //     if (productService.productExists(productId)) {
-    //         log.error("GETSIMILARPRODUCTS ERROR, NOT FOUND OBJECT WITH ID : {}",productId);
-    //         throw new ResponseStatusException(HttpStatus.NOT_FOUND, "PRODUCT NOT FOUND");
-            
-    //     }
-
-
-    //     return productService.getSimilarProductsDetailsList(productId);
-    // }
 
 }

@@ -3,10 +3,10 @@ package com.backenddevtest.similarproducts.application.usecases.implemented;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
-import com.backenddevtest.similarproducts.application.usecases.ProductService;
 import com.backenddevtest.similarproducts.domain.model.Product;
 import com.backenddevtest.similarproducts.domain.ports.output.ProductProvider;
 import com.backenddevtest.similarproducts.domain.ports.output.ProductRepository;
+import com.backenddevtest.similarproducts.domain.usecases.ProductService;
 
 import lombok.extern.slf4j.Slf4j;
 
